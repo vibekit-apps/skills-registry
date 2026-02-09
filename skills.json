@@ -12,6 +12,16 @@
       "verified": true,
       "tags": ["blockchain", "web3", "crypto"],
       "addedAt": "2026-02-09"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "description": "Payment processing, subscriptions, checkout, webhooks",
+      "url": "https://raw.githubusercontent.com/vibekit-apps/skills-registry/main/skills/stripe/SKILL.md",
+      "author": "VibeKit",
+      "verified": true,
+      "tags": ["payments", "subscriptions", "billing", "checkout"],
+      "addedAt": "2026-02-09"
     }
   ]
 }
