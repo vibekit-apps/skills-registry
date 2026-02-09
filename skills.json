@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     {
       "id": "solana",
@@ -21,6 +21,16 @@
       "author": "VibeKit",
       "verified": true,
       "tags": ["payments", "subscriptions", "billing", "checkout"],
+      "addedAt": "2026-02-09"
+    },
+    {
+      "id": "auth",
+      "name": "Authentication",
+      "description": "NextAuth.js v5 patterns: OAuth, credentials, sessions, protected routes",
+      "url": "https://authjs.dev/SKILL.md",
+      "author": "VibeKit",
+      "verified": true,
+      "tags": ["auth", "login", "oauth", "session", "nextauth"],
       "addedAt": "2026-02-09"
     }
   ]
