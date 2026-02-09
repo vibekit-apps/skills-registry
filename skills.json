@@ -1,0 +1,17 @@
+{
+  "$schema": "./schema.json",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "id": "solana",
+      "name": "Solana",
+      "description": "Wallet connection, dApp development, Anchor programs",
+      "url": "https://raw.githubusercontent.com/anza-xyz/solana-pay/master/SKILL.md",
+      "fallbackUrl": "https://solana.com/SKILL.md",
+      "author": "VibeKit",
+      "verified": true,
+      "tags": ["blockchain", "web3", "crypto"],
+      "addedAt": "2026-02-09"
+    }
+  ]
+}
