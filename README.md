@@ -2,9 +2,31 @@
 
 Audited registry of domain skills for [VibeKit](https://vibekit.bot).
 
+## Free with BYOK
+
+**Bring your own Anthropic API key and VibeKit is completely free.** No credit card, no subscription. Pay Anthropic directly for the AI — we handle deployment, databases, and domains.
+
+```bash
+curl -X POST https://vibekit.bot/api/v1/task \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "prompt": "Build a Stripe checkout page",
+    "skills": ["stripe"],
+    "anthropicApiKey": "sk-ant-..."
+  }'
+```
+
 ## What are Skills?
 
 Skills inject domain-specific knowledge into AI code generation. When you build an app with VibeKit and specify a skill, the AI gets context about that domain's best practices, APIs, and patterns.
+
+## Available Skills
+
+| ID | Name | Description | Verified |
+|----|------|-------------|----------|
+| solana | Solana | Wallet connection, dApp development, Anchor programs | ✅ |
+| stripe | Stripe | Payment processing, subscriptions, checkout, webhooks | ✅ |
+| auth | Authentication | NextAuth.js v5: OAuth, credentials, sessions, protected routes | ✅ |
 
 ## Using Skills
 
@@ -14,11 +36,7 @@ curl -X POST https://vibekit.bot/api/v1/task \
   -d '{"prompt": "Build a Solana wallet app", "skills": ["solana"]}'
 ```
 
-## Available Skills
-
-| ID | Name | Description | Verified |
-|----|------|-------------|----------|
-| solana | Solana | Wallet connection, dApp development, Anchor programs | ✅ |
+Skills are auto-detected from your prompt, but you can also specify them explicitly.
 
 ## Contributing a Skill
 
@@ -46,7 +64,7 @@ Your SKILL.md should contain:
 - Common pitfalls to avoid
 - Package versions that work together
 
-See [Solana's SKILL.md](https://github.com/anza-xyz/solana-pay/blob/master/SKILL.md) for reference.
+See [Stripe SKILL.md](https://github.com/vibekit-apps/skills-registry/blob/main/skills/stripe/SKILL.md) for reference.
 
 ## Verification
 
