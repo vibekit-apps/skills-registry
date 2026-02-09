@@ -12,6 +12,16 @@
       "verified": true,
       "tags": ["blockchain", "web3", "crypto"],
       "addedAt": "2026-02-09"
+    },
+    {
+      "id": "x-research",
+      "name": "X Research",
+      "description": "X/Twitter research agent - search tweets, monitor accounts, track discussions",
+      "url": "https://raw.githubusercontent.com/rohunvora/x-research-skill/main/SKILL.md",
+      "author": "rohunvora",
+      "verified": true,
+      "tags": ["twitter", "x", "research", "social", "search"],
+      "addedAt": "2026-02-09"
     }
   ]
 }
