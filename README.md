@@ -1,77 +1,70 @@
 # VibeKit Skills Registry
 
-Audited registry of domain skills for [VibeKit](https://vibekit.bot).
-
-## Free with BYOK
-
-**Bring your own Anthropic API key and VibeKit is completely free.** No credit card, no subscription. Pay Anthropic directly for the AI — we handle deployment, databases, and domains.
-
-```bash
-curl -X POST https://vibekit.bot/api/v1/task \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -d '{
-    "prompt": "Build a Stripe checkout page",
-    "skills": ["stripe"],
-    "anthropicApiKey": "sk-ant-..."
-  }'
-```
+Domain skills for [VibeKit](https://vibekit.bot) AI code generation.
 
 ## What are Skills?
 
-Skills inject domain-specific knowledge into AI code generation. When you build an app with VibeKit and specify a skill, the AI gets context about that domain's best practices, APIs, and patterns.
+Skills inject domain-specific knowledge into AI code generation. When Claude builds your app, it fetches relevant skills on-demand via MCP (Model Context Protocol) — no prompt bloat.
 
-## Available Skills
+## Available Skills (29)
 
-| ID | Name | Description | Verified |
-|----|------|-------------|----------|
-| solana | Solana | Wallet connection, dApp development, Anchor programs | ✅ |
-| stripe | Stripe | Payment processing, subscriptions, checkout, webhooks | ✅ |
-| auth | Authentication | NextAuth.js v5: OAuth, credentials, sessions, protected routes | ✅ |
+| Category | Skills |
+|----------|--------|
+| **Frontend** | nextjs, shadcn, react-expert, react-perf, responsive-design, animations, loading-states |
+| **Backend** | backend, trpc, error-handling, rate-limiting, caching, logging, websocket |
+| **Database** | drizzle |
+| **Security** | auth, security |
+| **Quality** | typescript, testing, clean-code, accessibility, conventional-commits |
+| **DevOps** | docker, api-design |
+| **Domain** | stripe, solana |
+| **Foundation** | design, workspace, regex |
 
 ## Using Skills
 
+### Via VibeKit API
 ```bash
 curl -X POST https://vibekit.bot/api/v1/task \
   -H "Authorization: Bearer YOUR_API_KEY" \
-  -d '{"prompt": "Build a Solana wallet app", "skills": ["solana"]}'
+  -d '{"prompt": "Build a dashboard with auth", "skills": ["nextjs", "auth"]}'
 ```
 
-Skills are auto-detected from your prompt, but you can also specify them explicitly.
+Skills are auto-detected from your prompt, but you can specify them explicitly.
 
-## Contributing a Skill
+### Via MCP (for AI agents)
+```typescript
+// Connect to vibekit-mcp
+const skills = await mcp.call("list_skills");     // Get manifest
+const nextjs = await mcp.call("get_skill", { id: "nextjs" });  // Fetch content
+```
 
-1. **Fork this repo**
-2. **Add your skill to `skills.json`:**
-   ```json
-   {
-     "id": "your-skill",
-     "name": "Your Skill",
-     "description": "What it does",
-     "url": "https://your-domain.com/SKILL.md",
-     "author": "Your Name",
-     "verified": false,
-     "tags": ["relevant", "tags"],
-     "addedAt": "YYYY-MM-DD"
-   }
-   ```
-3. **Submit a PR**
+## Skill Format
 
-### SKILL.md Format
-
-Your SKILL.md should contain:
+Each skill is a `SKILL.md` file containing:
 - API patterns and correct usage
-- Code examples (working, tested)
+- Working code examples
 - Common pitfalls to avoid
 - Package versions that work together
 
-See [Stripe SKILL.md](https://github.com/vibekit-apps/skills-registry/blob/main/skills/stripe/SKILL.md) for reference.
+```
+skills/
+├── nextjs/SKILL.md
+├── shadcn/SKILL.md
+├── trpc/SKILL.md
+└── ...
+```
 
-## Verification
+## Contributing
 
-Skills start as `"verified": false`. After review, we'll verify skills that:
-- Have accurate, working code examples
-- Follow best practices for the domain
-- Are actively maintained
+1. Fork this repo
+2. Add `skills/your-skill/SKILL.md`
+3. Add entry to `skills.json`
+4. Submit PR
+
+See existing skills for format reference.
+
+## BYOK = Free
+
+Bring your own Anthropic API key and VibeKit is completely free. Pay Anthropic directly for the AI — we handle deployment, databases, and domains.
 
 ## License
 

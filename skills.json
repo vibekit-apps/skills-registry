@@ -1,37 +1,209 @@
 {
   "$schema": "./schema.json",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "skills": [
     {
-      "id": "solana",
-      "name": "Solana",
-      "description": "Wallet connection, dApp development, Anchor programs",
-      "url": "https://raw.githubusercontent.com/anza-xyz/solana-pay/master/SKILL.md",
-      "fallbackUrl": "https://solana.com/SKILL.md",
-      "author": "VibeKit",
-      "verified": true,
-      "tags": ["blockchain", "web3", "crypto"],
-      "addedAt": "2026-02-09"
+      "id": "nextjs",
+      "name": "Next.js",
+      "description": "App Router, Server Components, Server Actions, layouts, routing, data fetching",
+      "tags": ["react", "frontend", "fullstack", "routing", "ssr"],
+      "verified": true
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui",
+      "description": "UI components, Radix primitives, forms, dark mode, theming",
+      "tags": ["ui", "components", "tailwind", "design-system"],
+      "verified": true
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "description": "Type safety, generics, Zod schemas, type inference",
+      "tags": ["types", "validation", "zod"],
+      "verified": true
+    },
+    {
+      "id": "react-expert",
+      "name": "React Expert",
+      "description": "React 18+ patterns, hooks, Server Components, state management",
+      "tags": ["react", "hooks", "state", "suspense"],
+      "verified": true
+    },
+    {
+      "id": "trpc",
+      "name": "tRPC",
+      "description": "Type-safe APIs, procedures, React Query integration",
+      "tags": ["api", "typesafe", "fullstack"],
+      "verified": true
+    },
+    {
+      "id": "drizzle",
+      "name": "Drizzle ORM",
+      "description": "Database schemas, queries, migrations, Postgres/SQLite/Turso",
+      "tags": ["database", "orm", "sql", "postgres"],
+      "verified": true
+    },
+    {
+      "id": "auth",
+      "name": "Authentication",
+      "description": "NextAuth.js v5, OAuth, credentials, sessions, protected routes",
+      "tags": ["auth", "login", "oauth", "session"],
+      "verified": true
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "OWASP patterns, input validation, CSRF, XSS prevention, encryption",
+      "tags": ["security", "owasp", "validation", "encryption"],
+      "verified": true
+    },
+    {
+      "id": "accessibility",
+      "name": "Accessibility",
+      "description": "WCAG 2.1 AA, ARIA, keyboard navigation, screen readers",
+      "tags": ["a11y", "wcag", "aria", "keyboard"],
+      "verified": true
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Jest, Vitest, React Testing Library, E2E patterns",
+      "tags": ["test", "jest", "vitest", "e2e"],
+      "verified": true
+    },
+    {
+      "id": "error-handling",
+      "name": "Error Handling",
+      "description": "API errors, retry patterns, circuit breakers, graceful degradation",
+      "tags": ["errors", "resilience", "retry", "fallback"],
+      "verified": true
+    },
+    {
+      "id": "backend",
+      "name": "Backend Patterns",
+      "description": "Express/Fastify, middleware, controllers, services, layered architecture",
+      "tags": ["nodejs", "express", "fastify", "api"],
+      "verified": true
+    },
+    {
+      "id": "react-perf",
+      "name": "React Performance",
+      "description": "57 Vercel rules: waterfalls, bundle optimization, memoization",
+      "tags": ["performance", "optimization", "bundle", "memo"],
+      "verified": true
+    },
+    {
+      "id": "responsive-design",
+      "name": "Responsive Design",
+      "description": "CSS Grid, Flexbox, Container Queries, mobile-first breakpoints",
+      "tags": ["css", "responsive", "mobile", "grid", "flexbox"],
+      "verified": true
+    },
+    {
+      "id": "animations",
+      "name": "Animations",
+      "description": "CSS transitions, keyframes, Framer Motion patterns",
+      "tags": ["animation", "motion", "transition", "css"],
+      "verified": true
+    },
+    {
+      "id": "caching",
+      "name": "Caching",
+      "description": "Cache strategies, invalidation, Redis, HTTP caching, CDN",
+      "tags": ["cache", "redis", "cdn", "performance"],
+      "verified": true
+    },
+    {
+      "id": "rate-limiting",
+      "name": "Rate Limiting",
+      "description": "Throttling algorithms, token buckets, API protection",
+      "tags": ["ratelimit", "throttle", "api", "protection"],
+      "verified": true
+    },
+    {
+      "id": "logging",
+      "name": "Logging & Observability",
+      "description": "Structured logging, OpenTelemetry, tracing, metrics",
+      "tags": ["logging", "observability", "tracing", "metrics"],
+      "verified": true
+    },
+    {
+      "id": "websocket",
+      "name": "WebSocket",
+      "description": "Real-time connections, reconnection, heartbeats, scaling",
+      "tags": ["websocket", "realtime", "socket", "live"],
+      "verified": true
+    },
+    {
+      "id": "regex",
+      "name": "Regex Patterns",
+      "description": "Common patterns for validation, parsing, extraction",
+      "tags": ["regex", "validation", "parsing", "patterns"],
+      "verified": true
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "description": "Container gotchas, Dockerfile best practices, compose, production",
+      "tags": ["docker", "container", "devops", "deployment"],
+      "verified": true
+    },
+    {
+      "id": "api-design",
+      "name": "API Design",
+      "description": "REST patterns, OpenAPI, versioning, pagination, HATEOAS",
+      "tags": ["api", "rest", "openapi", "design"],
+      "verified": true
+    },
+    {
+      "id": "loading-states",
+      "name": "Loading States",
+      "description": "Skeleton loaders, shimmer effects, progressive loading",
+      "tags": ["loading", "skeleton", "shimmer", "ux"],
+      "verified": true
+    },
+    {
+      "id": "conventional-commits",
+      "name": "Conventional Commits",
+      "description": "Git commit message formatting, changelog generation",
+      "tags": ["git", "commits", "changelog", "versioning"],
+      "verified": true
+    },
+    {
+      "id": "clean-code",
+      "name": "Clean Code",
+      "description": "Coding standards, naming, functions, refactoring patterns",
+      "tags": ["quality", "refactor", "standards", "maintainability"],
+      "verified": true
     },
     {
       "id": "stripe",
       "name": "Stripe",
       "description": "Payment processing, subscriptions, checkout, webhooks",
-      "url": "https://raw.githubusercontent.com/vibekit-apps/skills-registry/main/skills/stripe/SKILL.md",
-      "author": "VibeKit",
-      "verified": true,
       "tags": ["payments", "subscriptions", "billing", "checkout"],
-      "addedAt": "2026-02-09"
+      "verified": true
     },
     {
-      "id": "auth",
-      "name": "Authentication",
-      "description": "NextAuth.js v5 patterns: OAuth, credentials, sessions, protected routes",
-      "url": "https://authjs.dev/SKILL.md",
-      "author": "VibeKit",
-      "verified": true,
-      "tags": ["auth", "login", "oauth", "session", "nextauth"],
-      "addedAt": "2026-02-09"
+      "id": "solana",
+      "name": "Solana",
+      "description": "Wallet connection, dApp development, transactions",
+      "tags": ["blockchain", "web3", "crypto", "wallet"],
+      "verified": true
+    },
+    {
+      "id": "design",
+      "name": "Design System",
+      "description": "Base design tokens, color schemes, spacing, typography",
+      "tags": ["design", "tokens", "theming", "css"],
+      "verified": true
+    },
+    {
+      "id": "workspace",
+      "name": "Workspace",
+      "description": "Project structure, monorepo patterns, tooling setup",
+      "tags": ["project", "structure", "monorepo", "tooling"],
+      "verified": true
     }
   ]
 }
