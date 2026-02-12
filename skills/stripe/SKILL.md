@@ -107,7 +107,7 @@ export function CheckoutButton({ priceId }: { priceId: string }) {
 ### Environment variables needed:
 - STRIPE_SECRET_KEY (sk_test_... or sk_live_...)
 - STRIPE_WEBHOOK_SECRET (whsec_...)
-- NEXT_PUBLIC_URL (your app URL)
+- NEXT_PUBLIC_URL (your app URL, e.g. https://myapp.vibekit.bot)
 
 ### ❌ DO NOT:
 - Never expose STRIPE_SECRET_KEY to client

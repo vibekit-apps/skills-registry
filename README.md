@@ -62,9 +62,9 @@ skills/
 
 See existing skills for format reference.
 
-## BYOK = Free
+## Hosting
 
-Bring your own Anthropic API key and VibeKit is completely free. Pay Anthropic directly for the AI — we handle deployment, databases, and domains.
+Apps built with VibeKit deploy to `{name}.vibekit.bot` — hosting, databases, and domains included. Bring your own Anthropic API key and pay Anthropic directly for the AI.
 
 ## License
 

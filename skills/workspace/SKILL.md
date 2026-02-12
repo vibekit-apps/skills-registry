@@ -31,7 +31,7 @@ When `GITHUB_REPO` is not set, you MUST create a repo before finishing:
    git branch -M main
    git push -u origin main
    ```
-4. Tell user: "Created repo vibekit-apps/REPO_NAME and pushed. Use `/deploy` to deploy to Vercel."
+4. Tell user: "Created repo vibekit-apps/REPO_NAME and pushed. Use `/deploy` to deploy to REPO_NAME.vibekit.bot."
 
 DO NOT just create files and tell user to deploy. ALWAYS create the repo and push first.
 
@@ -44,7 +44,7 @@ When `GITHUB_REPO` is set:
    ```bash
    git add -A && git commit -m "Description of changes" && git push
    ```
-4. Tell user: "Pushed changes. Use `/deploy` to deploy."
+4. Tell user: "Pushed changes. Use `/deploy` to deploy to {name}.vibekit.bot."
 
 ## Topics (Forum Groups)
 
