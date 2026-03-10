@@ -4,13 +4,13 @@
 
 # VibeKit Skills Registry
 
-**47 domain skills** for [VibeKit](https://vibekit.bot) AI agents. Protocol docs, code patterns, and integration guides — fetched on-demand so your agent knows how to build with any framework or protocol.
+Domain skills for [VibeKit](https://vibekit.bot) AI agents. Protocol docs, code patterns, and integration guides — fetched on-demand so your agent knows how to build with any framework or protocol.
 
 ## What are Skills?
 
 Skills are structured knowledge packs that teach AI agents how to use specific tools, frameworks, and protocols. When your agent needs to swap tokens on Jupiter or build a Next.js app, it pulls the relevant skill — no prompt bloat, no hallucinated APIs.
 
-## Available Skills (47)
+## Available Skills
 
 | Category | Skills |
 |----------|--------|
