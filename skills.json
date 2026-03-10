@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "skills": [
     {
       "id": "nextjs",
@@ -359,6 +359,212 @@
         "agents",
         "openclaw",
         "automation"
+      ],
+      "verified": true
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "description": "DEX aggregator \u2014 swaps, limit orders, DCA, perps, lending, prediction markets",
+      "tags": [
+        "solana",
+        "defi",
+        "swap",
+        "dex",
+        "perps"
+      ],
+      "verified": true
+    },
+    {
+      "id": "raydium",
+      "name": "Raydium",
+      "description": "AMM \u2014 liquidity pools, concentrated liquidity, farming, AcceleRaytor",
+      "tags": [
+        "solana",
+        "defi",
+        "amm",
+        "liquidity"
+      ],
+      "verified": true
+    },
+    {
+      "id": "drift",
+      "name": "Drift",
+      "description": "Perpetuals DEX \u2014 leveraged trading, spot, lending, insurance fund",
+      "tags": [
+        "solana",
+        "defi",
+        "perps",
+        "trading"
+      ],
+      "verified": true
+    },
+    {
+      "id": "meteora",
+      "name": "Meteora",
+      "description": "Dynamic liquidity \u2014 DLMM pools, dynamic vaults, memecoin pools",
+      "tags": [
+        "solana",
+        "defi",
+        "liquidity",
+        "dlmm"
+      ],
+      "verified": true
+    },
+    {
+      "id": "helius",
+      "name": "Helius",
+      "description": "Solana RPC, webhooks, DAS API, transaction parsing, priority fees",
+      "tags": [
+        "solana",
+        "rpc",
+        "infrastructure",
+        "webhooks"
+      ],
+      "verified": true
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "description": "Whirlpools concentrated liquidity, swaps, position management",
+      "tags": [
+        "solana",
+        "defi",
+        "amm",
+        "whirlpool"
+      ],
+      "verified": true
+    },
+    {
+      "id": "metaplex",
+      "name": "Metaplex",
+      "description": "NFT standard \u2014 minting, collections, metadata, Bubblegum compressed NFTs",
+      "tags": [
+        "solana",
+        "nft",
+        "metaplex",
+        "mint"
+      ],
+      "verified": true
+    },
+    {
+      "id": "kamino",
+      "name": "Kamino",
+      "description": "DeFi hub \u2014 lending, liquidity, leverage, multiply strategies",
+      "tags": [
+        "solana",
+        "defi",
+        "lending",
+        "leverage"
+      ],
+      "verified": true
+    },
+    {
+      "id": "marginfi",
+      "name": "MarginFi",
+      "description": "Lending protocol \u2014 borrow, lend, flash loans, liquidations",
+      "tags": [
+        "solana",
+        "defi",
+        "lending",
+        "borrow"
+      ],
+      "verified": true
+    },
+    {
+      "id": "pumpfun",
+      "name": "Pump.fun",
+      "description": "Token launchpad \u2014 create, buy, sell memecoin tokens",
+      "tags": [
+        "solana",
+        "memecoin",
+        "launch",
+        "token"
+      ],
+      "verified": true
+    },
+    {
+      "id": "coingecko",
+      "name": "CoinGecko",
+      "description": "Crypto market data \u2014 prices, charts, trending, token info",
+      "tags": [
+        "crypto",
+        "prices",
+        "market-data",
+        "api"
+      ],
+      "verified": true
+    },
+    {
+      "id": "crossmint",
+      "name": "Crossmint",
+      "description": "NFT infrastructure \u2014 wallets, minting, payments, headless checkout",
+      "tags": [
+        "solana",
+        "nft",
+        "wallets",
+        "payments"
+      ],
+      "verified": true
+    },
+    {
+      "id": "dflow",
+      "name": "dFlow",
+      "description": "Order flow auctions \u2014 DEX routing, market making, payment for order flow",
+      "tags": [
+        "solana",
+        "defi",
+        "orderflow",
+        "routing"
+      ],
+      "verified": true
+    },
+    {
+      "id": "glam",
+      "name": "GLAM",
+      "description": "On-chain asset management \u2014 funds, vaults, portfolio management",
+      "tags": [
+        "solana",
+        "defi",
+        "funds",
+        "portfolio"
+      ],
+      "verified": true
+    },
+    {
+      "id": "breeze",
+      "name": "Breeze",
+      "description": "Solana starter templates and scaffolding for dApps",
+      "tags": [
+        "solana",
+        "scaffold",
+        "template",
+        "starter"
+      ],
+      "verified": true
+    },
+    {
+      "id": "swig",
+      "name": "Swig",
+      "description": "Solana wallet infrastructure \u2014 programmable wallets, session keys",
+      "tags": [
+        "solana",
+        "wallet",
+        "session-keys",
+        "infra"
+      ],
+      "verified": true
+    },
+    {
+      "id": "solana-agent",
+      "name": "Solana Agent Kit",
+      "description": "AI agent toolkit \u2014 60+ onchain actions, token ops, DeFi, NFTs via natural language",
+      "tags": [
+        "solana",
+        "agent",
+        "ai",
+        "toolkit",
+        "defi"
       ],
       "verified": true
     }

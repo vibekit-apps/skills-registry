@@ -1,0 +1,91 @@
+/**
+ * Marginfi Lending Setup Template
+ *
+ * Basic setup for lending operations:
+ * - Account initialization
+ * - Deposit operations
+ * - Portfolio monitoring
+ */
+
+import {
+  MarginfiClient,
+  MarginfiAccount,
+  getConfig,
+  MarginRequirementType,
+} from "@mrgnlabs/marginfi-client-v2";
+import { NodeWallet } from "@mrgnlabs/mrgn-common";
+import {
+  Connection,
+  PublicKey,
+  Keypair,
+  sendAndConfirmTransaction,
+} from "@solana/web3.js";
+import { BN } from "@coral-xyz/anchor";
+import Decimal from "decimal.js";
+import * as fs from "fs";
+import { logTransactionIpc } from '/tmp/dist/log-transaction.js';
+
+const RPC_URL = "https://api.breeze.baby/agent/rpc-mainnet-beta";
+const CONFIG = getConfig("production");
+
+async function setupLending() {
+  // Setup connection and wallet
+  const connection = new Connection(RPC_URL, "confirmed");
+  const walletSecret = JSON.parse(fs.readFileSync("./keypair.json", "utf-8"));
+  const wallet = Keypair.fromSecretKey(Buffer.from(walletSecret));
+  const walletAdapter = new NodeWallet(wallet);
+
+  console.log("Loading Marginfi...");
+  const client = await MarginfiClient.fetch(CONFIG, walletAdapter, connection);
+
+  // Get or create account
+  let accounts = await MarginfiAccount.findAllByOwner(connection, wallet.publicKey);
+  let account: MarginfiAccount;
+
+  if (accounts.length === 0) {
+    console.log("Creating account...");
+    account = await client.createMarginfiAccount();
+    console.log("Account created:", account.address.toBase58());
+  } else {
+    account = accounts[0];
+  }
+
+  console.log("Account:", account.publicKey.toBase58());
+
+  // Deposit SOL
+  console.log("\nDepositing SOL...");
+  const solBank = client.getBankByTokenSymbol("SOL");
+  if (solBank) {
+    // Use UI-denominated amount (1 SOL)
+    const sig = await account.deposit(1, solBank.address);
+    logTransactionIpc(sig, 'marginfi', wallet.publicKey.toBase58(), 'So11111111111111111111111111111111111111112', '1');
+    console.log("SOL deposited:", sig);
+  }
+
+  // Deposit USDC
+  console.log("Depositing USDC...");
+  const usdcBank = client.getBankByTokenSymbol("USDC");
+  if (usdcBank) {
+    const sig = await account.deposit(1000, usdcBank.address);
+    logTransactionIpc(sig, 'marginfi', wallet.publicKey.toBase58(), 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', '1000');
+    console.log("USDC deposited:", sig);
+  }
+
+  // Show portfolio
+  await account.reload();
+  console.log("\n=== Portfolio ===");
+  for (const balance of account.balances) {
+    if (balance.isAsset) {
+      console.log(`${balance.bankLabel}: ${balance.amount.toString()}`);
+    }
+  }
+
+  // Show health components
+  const { assets, liabilities } = account.computeHealthComponents(MarginRequirementType.Maintenance);
+  const netHealth = new Decimal(assets.toString()).minus(new Decimal(liabilities.toString()));
+  const freeCollateral = new Decimal(account.computeFreeCollateral().toString());
+  console.log("\nNet health (maint):", netHealth.toFixed(4));
+  console.log("Free collateral:", freeCollateral.toFixed(4));
+}
+
+setupLending().catch(console.error);
