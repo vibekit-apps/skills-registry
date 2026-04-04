@@ -316,15 +316,18 @@
     },
     {
       "id": "solana",
-      "name": "Solana",
-      "description": "Wallet connection, dApp development, transactions",
+      "name": "Solana Development",
+      "description": "Foundation-maintained: dApp UI, Anchor programs, wallet connection, testing, security, error diagnosis, version compatibility",
       "tags": [
         "blockchain",
         "web3",
         "crypto",
-        "wallet"
+        "wallet",
+        "anchor",
+        "solana"
       ],
-      "verified": true
+      "verified": true,
+      "author": "Solana Foundation"
     },
     {
       "id": "design",
